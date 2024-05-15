@@ -1,2 +1,2 @@
 # spaceXapi
-fetching data fro spaceX api
+fetching data from spaceX api.
