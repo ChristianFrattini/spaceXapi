@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import {
   Card,
   CardContent,
@@ -39,7 +40,7 @@ export const Rockets: React.FC = () => {
           >
             {rockets.map(({ id, name, flickr_images, description }) => (
               <Card className={"bg-zinc-900 py-2 mb-7"} key={id}>
-                <Link href={`/rockets/${id}`} key={id}>
+                <Link href={`/rockets/${id}`}>
                   <div className={"flex justify-center items-center pt-2"}>
                     <img
                       src={flickr_images[0]}
@@ -57,11 +58,7 @@ export const Rockets: React.FC = () => {
                       <p
                         className={"text-white opacity-75 mb-10"}
                       >{`${description.substring(0, 100)}...`}</p>
-                      <Link
-                        href={`/rockets/${id}`}
-                        className={"text-white"}
-                        key={id}
-                      >
+                      <Link href={`/rockets/${id}`} className={"text-white"}>
                         Read More &rarr;
                       </Link>
                     </CardContent>
