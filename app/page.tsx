@@ -1,5 +1,6 @@
 import { Headquarters } from "./components/headquarters/headquarters";
 import { Rockets } from "./components/rockets/rockets";
+import Image from "next/image";
 
 export default async function Home() {
   return (

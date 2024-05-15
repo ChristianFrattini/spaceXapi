@@ -38,13 +38,13 @@ export const Rockets: React.FC = () => {
             className={"max-width grid grid-cols-1 gap-5  lg:grid-cols-3 px-5"}
           >
             {rockets.map(({ id, name, flickr_images, description }) => (
-              <Card className={"bg-zinc-900 py-2 mb-7"}>
-                <Link href={`/rockets/${id}`} key={id}>
+              <Card className={"bg-zinc-900 py-2 mb-7"} key={id}>
+                <Link href={`/rockets/${id}`}>
                   <div className={"flex justify-center items-center pt-2"}>
                     <img
                       src={flickr_images[0]}
                       alt={name}
-                      className={"h-64 object-cover rounded-lg "}
+                      className={"h-64 w-full object-cover rounded-lg "}
                     />
                   </div>
                   <div className={"p-5"}>
