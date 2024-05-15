@@ -42,10 +42,12 @@ export const Rockets: React.FC = () => {
               <Card className={"bg-zinc-900 py-2 mb-7"} key={id}>
                 <Link href={`/rockets/${id}`}>
                   <div className={"flex justify-center items-center pt-2"}>
-                    <img
+                    <Image
+                      width={350}
+                      height={20}
                       src={flickr_images[0]}
                       alt={name}
-                      className={"h-64 w-full object-cover rounded-lg "}
+                      className={"object-cover rounded-lg "}
                     />
                   </div>
                   <div className={"p-5"}>
@@ -58,7 +60,7 @@ export const Rockets: React.FC = () => {
                       <p
                         className={"text-white opacity-75 mb-10"}
                       >{`${description.substring(0, 100)}...`}</p>
-                      <Link href={`/rockets/${id}`} className={"text-white"}>
+                      <Link href={`/`} className={"text-white"}>
                         Read More &rarr;
                       </Link>
                     </CardContent>
